@@ -27,7 +27,6 @@ body {
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    gap: 1.5rem;
 }
 
 
@@ -40,20 +39,24 @@ body {
     text-transform: uppercase;
 }
 
-.sidebar .side-nav {
+.sidebar .side-nav,
+.sidebar .settings-nav {
     display: flex;
     flex-direction: column;
     gap: .5rem;
+    margin-top: 3rem;
 }
 
-.sidebar .side-nav a {
+.sidebar .side-nav a,
+.sidebar .settings-nav a {
     display: flex;
     align-items: center;
     gap: 1rem;
     text-decoration: none;
 }
 
-.sidebar .side-nav span {
+.sidebar .side-nav span,
+.sidebar .settings-nav span {
     height: 3em;
     width: 3em;
     display: flex;
