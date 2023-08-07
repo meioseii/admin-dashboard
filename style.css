@@ -29,14 +29,13 @@ body {
     padding: 1rem;
 }
 
-
-
 .sidebar .title {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 1rem;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .sidebar .side-nav,
@@ -49,10 +48,18 @@ body {
 
 .sidebar .side-nav a,
 .sidebar .settings-nav a {
+    border-radius: .5rem;
     display: flex;
     align-items: center;
     gap: 1rem;
     text-decoration: none;
+    transition: .3s ease-in-out;
+}
+
+.sidebar .side-nav a:hover,
+.sidebar .settings-nav a:hover {
+    border-radius: 0.5rem;
+    background-color: #082f49;
 }
 
 .sidebar .side-nav span,
