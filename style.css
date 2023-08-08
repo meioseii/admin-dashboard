@@ -171,6 +171,25 @@ body {
     color: #000000;
 }
 
+.header .bottom-header .actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-right: 1rem;
+}
+
+.header .bottom-header .actions button {
+    background-color: var(--accent);
+    border: none;
+    height: 2.5rem;
+    width: 7.5rem;
+    border-radius: 1.5rem;
+    font-weight: 500;
+}
+
+
 .main {
     background-color: var(--primary-color);
 }
