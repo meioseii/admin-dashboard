@@ -243,6 +243,12 @@
     padding: 2rem 1.5rem;
     border-radius: .5rem;
     border-left: .5rem solid var(--highlights-2);
+    transition: .3s ease-in-out;
+}
+
+.card-container:hover {
+    /* transform: scale(1.05); */
+    filter: drop-shadow(0 0 0.2rem var(--highlights-1));
 }
 
 .project-actions {
