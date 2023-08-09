@@ -116,6 +116,7 @@
     height: 24px;
     width: 24px;
     cursor: pointer;
+    transition: 0.3s ease-in-out;
 }
 
 .header .top-header .profile {
@@ -251,6 +252,14 @@
     gap: 1rem;
     margin-top: auto;
 }
-.card-container .project-actions img {
+.project-actions img {
     height: 24px;
+    transition: .3s ease-in-out;
+}
+
+.project-actions img:hover,
+.icon:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 0.1rem var(--highlights-1));
+    cursor: pointer;
 }
