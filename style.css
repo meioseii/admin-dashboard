@@ -14,18 +14,15 @@
     --primary-color: #e0f2fe;
     --secondary-color: #f0f9ff;
     --accent: #0c4a6e;
-    --highlights: #082f49;
-}
-
-body {
-    height: 100vh;
+    --highlights-1: #082f49;
+    --highlights-2: #fbbf24;
 }
 
 .container {
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: minmax(1fr, 160px) 4fr;
 }
 
 .sidebar {
@@ -66,7 +63,7 @@ body {
 .sidebar .side-nav a:hover,
 .sidebar .settings-nav a:hover {
     border-radius: 0.5rem;
-    background-color: var(--highlights);
+    background-color: var(--highlights-1);
 }
 
 .sidebar .side-nav span,
@@ -81,7 +78,7 @@ body {
 .header {
     background-color: var(--secondary-color);
     grid-column: 2 / -1;
-    /* box-shadow: 0 5px 4px 0 rgba(0,0,0,.2); */
+    grid-row: 1 / 2;
     display: grid;
     grid-template-rows: 1fr 2fr;
     padding: 1rem 2rem;
@@ -200,10 +197,60 @@ body {
 }
 
 .header .bottom-header .actions button:hover {
-    background-color: var(--highlights);
+    background-color: var(--highlights-1);
 
 }
 
 .main {
     background-color: var(--primary-color);
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 1.5rem 1rem;
+    gap: 2rem;
+}
+
+.main * {
+    color: #000000;
+}
+
+.main > div > h3 {
+    font-weight: 500;
+    margin-bottom: .75rem;
+}
+
+.main .projects {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+.main .projects .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+    background-color: var(--secondary-color);
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+    padding: 2rem 1.5rem;
+    border-radius: .5rem;
+    border-left: .5rem solid var(--highlights-2);
+}
+
+.project-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    margin-top: auto;
+}
+.card-container .project-actions img {
+    height: 24px;
 }
